@@ -13,3 +13,5 @@
 /.tox/
 
 .DS_Store
+
+bin/

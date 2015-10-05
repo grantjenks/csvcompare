@@ -2,9 +2,6 @@ from functools import partial
 
 from .levenshtein import Edit, diff, match_cost
 
-def todo(*args):
-    return 'todo'
-
 def old_row_len(old, new):
     return len(old)
 
@@ -15,13 +12,13 @@ def alter_cost(old, new):
     return diff(old, new, score_only=True) + 0.001
 
 def remove_value(old, pos, new, loc):
-    return [('remove', value) for value in old[pos]]
+    return [('remove', (value, None)) for value in old[pos]]
 
 def insert_value(old, pos, new, loc):
-    return [('insert', value) for value in new[loc]]
+    return [('insert', (None, value)) for value in new[loc]]
 
 def match_value(old, pos, new, loc):
-    return ['match'] * len(old[pos])
+    return [('match', (value, value)) for value in new[loc]]
 
 def alter_value(old, pos, new, loc):
     return diff(old[pos], new[loc])

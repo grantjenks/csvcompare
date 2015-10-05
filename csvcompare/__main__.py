@@ -1,6 +1,7 @@
 import argparse, csv
 
 from .algorithm import csv_file_diff
+from .display import html
 
 parser = argparse.ArgumentParser(
     prog='csvcompare',
@@ -24,4 +25,10 @@ args = parser.parse_args()
 old_cells = list(csv.reader(args.old_file))
 new_cells = list(csv.reader(args.new_file))
 
-print csv_file_diff(old_cells, new_cells)
+import tempfile, webbrowser
+
+with tempfile.NamedTemporaryFile(suffix='.html') as writer:
+    writer.write(html(csv_file_diff(old_cells, new_cells)))
+    writer.flush()
+    webbrowser.open('file://' + writer.name)
+    raw_input('press Enter to exit')
