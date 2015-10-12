@@ -7,5 +7,5 @@ python:
   - "3.4"
   - "pypy"
   - "pypy3"
-install: true
+install: "pip install jinja2"
 script:  nosetests -v
