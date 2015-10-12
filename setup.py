@@ -4,8 +4,6 @@ import sys
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-import csvcompare
-
 class Tox(TestCommand):
     def finalize_options(self):
         TestCommand.finalize_options(self)
@@ -29,7 +27,7 @@ with open('LICENSE') as f:
 
 setup(
     name='csvcompare',
-    version=csvcompare.__version__,
+    version='0.1.2',
     description='CSV file diff and comparison',
     long_description=readme,
     author='Grant Jenks',
