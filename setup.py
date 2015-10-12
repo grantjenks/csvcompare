@@ -37,7 +37,8 @@ setup(
     url='http://www.grantjenks.com/docs/csvcompare/',
     py_modules=['csvcompare'],
     package_data={'': ['LICENSE', 'README.rst']},
-    tests_require=['tox'],
+    install_requires=['jinja2'],
+    tests_require=['tox', 'jinja2'],
     cmdclass={'test': Tox},
     license=license,
     classifiers=(

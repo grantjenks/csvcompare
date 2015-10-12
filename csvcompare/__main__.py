@@ -11,12 +11,12 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument(
     'old_file',
-    type=argparse.FileType('rb'),
+    type=argparse.FileType('r'),
     help='Path to old CSV file',
 )
 parser.add_argument(
     'new_file',
-    type=argparse.FileType('rb'),
+    type=argparse.FileType('r'),
     help='Path to new CSV file'
 )
 

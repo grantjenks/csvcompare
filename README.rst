@@ -23,6 +23,9 @@ Review
   - register command
   - sdist command
   - upload command
+- MANIFEST.in file
+- tox.ini file
+- .travis.yml file
 
 Release Workflow
 ................
