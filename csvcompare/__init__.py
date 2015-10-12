@@ -1,9 +1,5 @@
 from .algorithm import csv_file_diff
-
-try:
-    from .display import html
-except ImportError:
-    pass
+from .display import html
 
 __title__ = 'csvcompare'
 __version__ = '0.1.2'
