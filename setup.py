@@ -27,7 +27,7 @@ with open('LICENSE') as f:
 
 setup(
     name='csvcompare',
-    version='0.1.2',
+    version='0.2.1',
     description='CSV file diff and comparison',
     long_description=readme,
     author='Grant Jenks',
