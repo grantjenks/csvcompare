@@ -24,6 +24,20 @@ Review
   - sdist command
   - upload command
 
+Release Workflow
+................
+
+- Make changes.
+- Bump version.
+- tox
+- git commit -m "Bump version to ___"
+- git tag -a v___ abchash -m v___
+- git push
+- git push --tags
+- python setup.py sdist upload
+- cd docs && make html
+- Upload docs
+
 Features
 --------
 
