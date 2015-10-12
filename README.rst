@@ -6,15 +6,6 @@ CSVCompare: Compare CSV Files
 
 `CSVCompare`_ is an Apache2 licensed module for CSV file comparison.
 
-TODO
-----
-
-- Publish to pypi
-- PyInstaller
-- REST interface
-- Package django app with web interface
-- docs
-
 Review
 ------
 
@@ -26,6 +17,15 @@ Review
 - MANIFEST.in file
 - tox.ini file
 - .travis.yml file
+  - travis-ci.org
+- pyinstaller --onefile --name csvcompare app.py
+- REST interface
+
+TODO
+----
+
+- Package django app with web interface
+- docs
 
 Release Workflow
 ................
